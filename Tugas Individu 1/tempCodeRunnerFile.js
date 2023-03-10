@@ -30,7 +30,7 @@ const randomInt = (start, end) => {
 const getDistance = (a, b) => {
     let x = Math.abs(b.position[0] - a.position[0])
     let y = Math.abs(b.position[1] - a.position[1])
-    return Math.floor(Math.sqrt(x*x + y*y))
+    return Math.floor(Math.sqrt(x*x + y+y))
       
 }
 
