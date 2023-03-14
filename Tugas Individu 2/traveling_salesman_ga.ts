@@ -104,13 +104,16 @@ const geneticAlgorithm = (verts: Vertices, pop_size: number, max_generation: num
         startPop.push(createPath(verts, pathLength))
     }
 
+    // Sort based on fitness
     startPop.sort((a, b) => a.fit - b.fit)
 
+
     for(let i = 0; i < max_generation; i++) {
-        
+        // Generate new population
         for(let j = 0; newPop.length + 2 <= pop_size; j++) {
             newPop.push(...crossOver(verts, startPop[j].path, startPop[j+1].path, 50))
         }
+        // Sort based on fitness
         newPop.sort((a, b) => a.fit - b.fit)
         console.log(newPop)
         startPop = [...newPop]
