@@ -119,6 +119,10 @@ graph.addEdge("SA", "V")
 graph.addEdge("NSW", "Q")
 graph.addEdge("NSW", "V")
 
-leastConflicts(graph, ["red", "green", "blue"], 1000)
+if(leastConflicts(graph, ["red", "green", "blue"], 1000)) {
+    console.log(graph)
+} else {
+    console.log("Did not found a solution (Either local minimum or impossible)")
+}
 
-console.log(graph)
+
